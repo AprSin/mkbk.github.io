@@ -1,0 +1,985 @@
+openapi: 3.0.3
+info:
+  title: 云上共富 - 农村集体经济数字化平台 API
+  description: |
+    云上共富购物系统后端API文档
+
+    ## 核心功能模块
+    - 用户认证模块 (/api/auth)
+    - 商品管理模块 (/api/products)
+    - 订单模块 (/api/orders)
+    - 投资项目模块 (/api/projects)
+    - 投标模块 (/api/bids)
+    - 用户管理模块 (/api/users)
+  version: 1.0.0
+  contact:
+    name: 云上共富技术支持
+
+servers:
+  - url: http://localhost:3001
+    description: 开发环境服务器
+
+tags:
+  - name: 认证
+    description: 用户认证相关接口
+  - name: 商品
+    description: 商品管理相关接口
+  - name: 购物车
+    description: 购物车相关接口
+  - name: 订单
+    description: 订单管理相关接口
+  - name: 项目
+    description: 投资项目相关接口
+  - name: 投标
+    description: 投标相关接口
+  - name: 用户
+    description: 用户管理相关接口
+
+paths:
+  /api/auth/register:
+    post:
+      tags:
+        - 认证
+      summary: 用户注册
+      description: 支持merchant/buyer两种账户类型注册
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - email
+                - phone
+                - password
+                - accountType
+              properties:
+                username:
+                  type: string
+                  minLength: 3
+                  maxLength: 50
+                  pattern: "^[a-zA-Z0-9_]+$"
+                  description: 用户名（字母、数字、下划线）
+                email:
+                  type: string
+                  format: email
+                  description: 有效邮箱地址
+                phone:
+                  type: string
+                  pattern: "^1[3-9]\\d{9}$"
+                  description: 中国手机号格式
+                password:
+                  type: string
+                  minLength: 8
+                  description: 密码（至少8位，包含大小写字母、数字、特殊字符）
+                accountType:
+                  type: string
+                  enum: [merchant, buyer]
+                  description: 账户类型（商户或买家）
+                name:
+                  type: string
+                  description: 姓名/企业名（可选）
+      responses:
+        '201':
+          description: 注册成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '400':
+          description: 参数验证错误
+        '409':
+          description: 用户名或邮箱已存在
+
+  /api/auth/login:
+    post:
+      tags:
+        - 认证
+      summary: 用户登录
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - username
+                - password
+                - accountType
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+                accountType:
+                  type: string
+                  enum: [merchant, buyer]
+      responses:
+        '200':
+          description: 登录成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+        '401':
+          description: 用户名或密码错误
+        '403':
+          description: 账户已被禁用
+
+  /api/auth/refresh-token:
+    post:
+      tags:
+        - 认证
+      summary: 刷新令牌
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 令牌刷新成功
+
+  /api/auth/logout:
+    post:
+      tags:
+        - 认证
+      summary: 退出登录
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 登出成功
+
+  /api/auth/me:
+    get:
+      tags:
+        - 认证
+      summary: 获取当前用户信息
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    properties:
+                      user:
+                        $ref: '#/components/schemas/User'
+
+  /api/products:
+    get:
+      tags:
+        - 商品
+      summary: 获取商品列表
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 100
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [在售, 已售罄, 下架]
+        - name: keyword
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      products:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Product'
+                      pagination:
+                        $ref: '#/components/schemas/Pagination'
+    post:
+      tags:
+        - 商品
+      summary: 创建商品（仅商户）
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - price
+                - stock
+              properties:
+                name:
+                  type: string
+                  maxLength: 200
+                description:
+                  type: string
+                price:
+                  type: number
+                  minimum: 0
+                stock:
+                  type: integer
+                  minimum: 0
+                origin:
+                  type: string
+                category:
+                  type: string
+                image:
+                  type: string
+      responses:
+        '201':
+          description: 创建成功
+        '403':
+          description: 无权操作（仅商户可创建）
+
+  /api/products/{id}:
+    get:
+      tags:
+        - 商品
+      summary: 获取商品详情
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 成功
+        '404':
+          description: 商品不存在
+    put:
+      tags:
+        - 商品
+      summary: 更新商品（仅所有者）
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 更新成功
+        '403':
+          description: 无权修改此商品
+        '404':
+          description: 商品不存在
+    delete:
+      tags:
+        - 商品
+      summary: 删除商品（仅所有者）
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 删除成功
+        '403':
+          description: 无权删除此商品
+        '404':
+          description: 商品不存在
+
+  /api/products/merchant/products:
+    get:
+      tags:
+        - 商品
+      summary: 获取商户自己的商品列表
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+
+  /api/orders:
+    get:
+      tags:
+        - 订单
+      summary: 获取订单列表
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+        - name: status
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 成功
+    post:
+      tags:
+        - 订单
+      summary: 创建订单
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - items
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      productId:
+                        type: integer
+                      quantity:
+                        type: integer
+                        minimum: 1
+      responses:
+        '201':
+          description: 订单创建成功
+        '400':
+          description: 商品不可售或库存不足
+
+  /api/orders/{id}:
+    get:
+      tags:
+        - 订单
+      summary: 获取订单详情
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 成功
+        '403':
+          description: 无权查看此订单
+
+  /api/orders/{id}/pay:
+    put:
+      tags:
+        - 订单
+      summary: 买家付款
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 付款成功
+        '400':
+          description: 订单状态不允许付款
+
+  /api/orders/{id}/ship:
+    put:
+      tags:
+        - 订单
+      summary: 商户发货
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                logisticsCompany:
+                  type: string
+                trackingNumber:
+                  type: string
+      responses:
+        '200':
+          description: 发货成功
+
+  /api/orders/{id}/confirm:
+    put:
+      tags:
+        - 订单
+      summary: 买家确认收货
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 确认收货成功
+
+  /api/orders/{id}/return:
+    put:
+      tags:
+        - 订单
+      summary: 买家申请退单
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - reason
+              properties:
+                reason:
+                  type: string
+                quantity:
+                  type: integer
+      responses:
+        '200':
+          description: 退单申请已提交
+
+  /api/orders/{id}/return/approve:
+    put:
+      tags:
+        - 订单
+      summary: 商户批准退单
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 退单已批准
+        '400':
+          description: 订单状态不允许审批退单
+
+  /api/orders/{id}/return/reject:
+    put:
+      tags:
+        - 订单
+      summary: 商户拒绝退单
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - reason
+              properties:
+                reason:
+                  type: string
+      responses:
+        '200':
+          description: 退单已拒绝
+
+  /api/orders/buyer/orders:
+    get:
+      tags:
+        - 订单
+      summary: 买家查看自己的订单
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+
+  /api/orders/merchant/orders:
+    get:
+      tags:
+        - 订单
+      summary: 商户查看销售订单
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+
+  /api/projects:
+    get:
+      tags:
+        - 项目
+      summary: 获取投资项目列表
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+        - name: type
+          in: query
+          schema:
+            type: string
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [交易中, 已完成, 已取消]
+        - name: keyword
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 成功
+    post:
+      tags:
+        - 项目
+      summary: 创建投资项目（仅商户）
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - price
+              properties:
+                name:
+                  type: string
+                description:
+                  type: string
+                price:
+                  type: number
+                location:
+                  type: string
+                area:
+                  type: string
+                type:
+                  type: string
+                contactPerson:
+                  type: string
+                contactInfo:
+                  type: string
+                bidEndDate:
+                  type: string
+                  format: date-time
+      responses:
+        '201':
+          description: 创建成功
+
+  /api/projects/{id}:
+    get:
+      tags:
+        - 项目
+      summary: 获取项目详情
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 成功
+    put:
+      tags:
+        - 项目
+      summary: 更新项目（仅所有者）
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 更新成功
+    delete:
+      tags:
+        - 项目
+      summary: 删除项目（仅所有者）
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 删除成功
+
+  /api/bids:
+    get:
+      tags:
+        - 投标
+      summary: 获取投标列表
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+    post:
+      tags:
+        - 投标
+      summary: 提交投标（仅买家）
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - projectId
+                - amount
+                - contact
+                - phone
+              properties:
+                projectId:
+                  type: integer
+                amount:
+                  type: number
+                  minimum: 0
+                contact:
+                  type: string
+                  maxLength: 100
+                phone:
+                  type: string
+                  pattern: "^1[3-9]\\d{9}$"
+      responses:
+        '201':
+          description: 投标提交成功
+        '400':
+          description: 投标已截止或已投过标
+
+  /api/bids/{id}:
+    get:
+      tags:
+        - 投标
+      summary: 获取投标详情
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+    put:
+      tags:
+        - 投标
+      summary: 更新投标（仅投标者）
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 更新成功
+    delete:
+      tags:
+        - 投标
+      summary: 撤回投标（仅投标者）
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 撤回成功
+
+  /api/bids/{id}/accept:
+    put:
+      tags:
+        - 投标
+      summary: 商户接受投标
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 已接受投标
+
+  /api/bids/{id}/reject:
+    put:
+      tags:
+        - 投标
+      summary: 商户拒绝投标
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - reason
+              properties:
+                reason:
+                  type: string
+      responses:
+        '200':
+          description: 已拒绝投标
+
+  /api/bids/project/{projectId}/bids:
+    get:
+      tags:
+        - 投标
+      summary: 查看项目的所有投标
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+
+  /api/users:
+    get:
+      tags:
+        - 用户
+      summary: 获取用户列表（仅管理员）
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+
+  /api/users/{id}:
+    get:
+      tags:
+        - 用户
+      summary: 获取用户详情
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: 成功
+
+  /api/users/profile:
+    put:
+      tags:
+        - 用户
+      summary: 更新个人信息
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                phone:
+                  type: string
+                address:
+                  type: string
+                businessLicense:
+                  type: string
+                businessScope:
+                  type: string
+                companyPhone:
+                  type: string
+                companyAddress:
+                  type: string
+      responses:
+        '200':
+          description: 更新成功
+
+  /api/users/password:
+    put:
+      tags:
+        - 用户
+      summary: 修改密码
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - currentPassword
+                - newPassword
+                - confirmPassword
+              properties:
+                currentPassword:
+                  type: string
+                newPassword:
+                  type: string
+                confirmPassword:
+                  type: string
+      responses:
+        '200':
+          description: 密码修改成功
+
+  /health:
+    get:
+      summary: 健康检查
+      responses:
+        '200':
+          description: 服务器运行正常
+
+  /api/db/status:
+    get:
+      summary: 数据库状态
+      responses:
+        '200':
+          description: 数据库连接状态
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        role:
+          type: string
+          enum: [admin, user, guest]
+        accountType:
+          type: string
+          enum: [merchant, buyer]
+        name:
+          type: string
+        address:
+          type: string
+        isActive:
+          type: boolean
+        lastLoginAt:
+          type: string
+          format: date-time
+
+    Product:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+        origin:
+          type: string
+        image:
+          type: string
+        status:
+          type: string
+          enum: [在售, 已售罄, 下架]
+        category:
+          type: string
+        userId:
+          type: integer
+        viewCount:
+          type: integer
+        salesCount:
+          type: integer
+
+    Order:
+      type: object
+      properties:
+        id:
+          type: integer
+        orderNo:
+          type: string
+        buyerId:
+          type: integer
+        merchantId:
+          type: integer
+        productId:
+          type: integer
+        quantity:
+          type: integer
+        totalPrice:
+          type: number
+        status:
+          type: string
+          enum: [待付款, 待发货, 待收货, 已完成, 已取消, 退单中, 已退单]
+        paymentStatus:
+          type: string
+          enum: [未支付, 已支付, 已退款]
+        logisticsCompany:
+          type: string
+        trackingNumber:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+
+    Pagination:
+      type: object
+      properties:
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+        totalPages:
+          type: integer
+
+    AuthResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            user:
+              $ref: '#/components/schemas/User'
+            token:
+              type: string
+
+    LoginResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        data:
+          type: object
+          properties:
+            user:
+              $ref: '#/components/schemas/User'
+            token:
+              type: string
+            tokenType:
+              type: string
+              example: Bearer
+            expiresIn:
+              type: string
+              example: 2h

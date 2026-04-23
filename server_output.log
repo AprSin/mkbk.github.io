@@ -1,0 +1,147 @@
+============================================================
+云上共富 - 数据库连接状态报告
+============================================================
+数据库类型: mysql
+主机地址: localhost:3306
+数据库名称: cloud_prosperity
+连接状态: connected
+响应时间: 53ms
+============================================================
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'users' AND TABLE_SCHEMA = 'cloud_prosperity'
+Executing (default): SHOW FULL COLUMNS FROM `users`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='cloud_prosperity' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): ALTER TABLE `users` CHANGE `username` `username` VARCHAR(50) NOT NULL UNIQUE;
+Executing (default): ALTER TABLE `users` CHANGE `email` `email` VARCHAR(100) NOT NULL UNIQUE;
+Executing (default): ALTER TABLE `users` CHANGE `phone` `phone` VARCHAR(20);
+Executing (default): ALTER TABLE `users` CHANGE `password` `password` VARCHAR(255) NOT NULL;
+Executing (default): ALTER TABLE `users` CHANGE `role` `role` ENUM('admin', 'user', 'guest') DEFAULT 'user';
+Executing (default): ALTER TABLE `users` CHANGE `account_type` `account_type` ENUM('merchant', 'buyer') DEFAULT 'buyer';
+Executing (default): ALTER TABLE `users` CHANGE `name` `name` VARCHAR(100);
+Executing (default): ALTER TABLE `users` CHANGE `address` `address` VARCHAR(255);
+Executing (default): ALTER TABLE `users` CHANGE `business_license` `business_license` VARCHAR(100) COMMENT '营业执照编号';
+Executing (default): ALTER TABLE `users` CHANGE `business_scope` `business_scope` TEXT COMMENT '经营范围';
+Executing (default): ALTER TABLE `users` CHANGE `company_phone` `company_phone` VARCHAR(20) COMMENT '企业联系电话';
+Executing (default): ALTER TABLE `users` CHANGE `company_address` `company_address` VARCHAR(255) COMMENT '企业地址';
+Executing (default): ALTER TABLE `users` CHANGE `is_active` `is_active` TINYINT(1) DEFAULT true;
+Executing (default): ALTER TABLE `users` CHANGE `last_login_at` `last_login_at` DATETIME;
+Executing (default): ALTER TABLE `users` CHANGE `last_login_ip` `last_login_ip` VARCHAR(45);
+Executing (default): ALTER TABLE `users` CHANGE `created_at` `created_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `users` CHANGE `updated_at` `updated_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `users` CHANGE `deleted_at` `deleted_at` DATETIME;
+Executing (default): SHOW INDEX FROM `users`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'products' AND TABLE_SCHEMA = 'cloud_prosperity'
+Executing (default): SHOW FULL COLUMNS FROM `products`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'products' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='cloud_prosperity' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): ALTER TABLE `products` CHANGE `name` `name` VARCHAR(200) NOT NULL;
+Executing (default): ALTER TABLE `products` CHANGE `description` `description` TEXT;
+Executing (default): ALTER TABLE `products` CHANGE `price` `price` DECIMAL(10,2) NOT NULL;
+Executing (default): ALTER TABLE `products` CHANGE `stock` `stock` INTEGER NOT NULL DEFAULT 0;
+Executing (default): ALTER TABLE `products` CHANGE `origin` `origin` VARCHAR(100);
+Executing (default): ALTER TABLE `products` CHANGE `image` `image` VARCHAR(500);
+Executing (default): ALTER TABLE `products` CHANGE `status` `status` ENUM('在售', '已售罄', '下架') DEFAULT '在售';
+Executing (default): ALTER TABLE `products` CHANGE `category` `category` VARCHAR(50);
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='products' AND constraint_name = 'products_ibfk_1' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `products` DROP FOREIGN KEY `products_ibfk_1`;
+Executing (default): ALTER TABLE `products` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): ALTER TABLE `products` CHANGE `view_count` `view_count` INTEGER DEFAULT 0;
+Executing (default): ALTER TABLE `products` CHANGE `sales_count` `sales_count` INTEGER DEFAULT 0;
+Executing (default): ALTER TABLE `products` CHANGE `created_at` `created_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `products` CHANGE `updated_at` `updated_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `products` CHANGE `deleted_at` `deleted_at` DATETIME;
+Executing (default): SHOW INDEX FROM `products`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'projects' AND TABLE_SCHEMA = 'cloud_prosperity'
+Executing (default): SHOW FULL COLUMNS FROM `projects`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'projects' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='cloud_prosperity' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): ALTER TABLE `projects` CHANGE `name` `name` VARCHAR(200) NOT NULL;
+Executing (default): ALTER TABLE `projects` CHANGE `description` `description` TEXT;
+Executing (default): ALTER TABLE `projects` CHANGE `price` `price` DECIMAL(15,2) NOT NULL;
+Executing (default): ALTER TABLE `projects` CHANGE `location` `location` VARCHAR(255);
+Executing (default): ALTER TABLE `projects` CHANGE `area` `area` VARCHAR(100) COMMENT '面积';
+Executing (default): ALTER TABLE `projects` CHANGE `type` `type` VARCHAR(50) COMMENT '项目类型：宅基地、厂房等';
+Executing (default): ALTER TABLE `projects` CHANGE `status` `status` ENUM('交易中', '已完成', '已取消') DEFAULT '交易中';
+Executing (default): ALTER TABLE `projects` CHANGE `bid_end_date` `bid_end_date` DATETIME COMMENT '投标截止日期';
+Executing (default): ALTER TABLE `projects` CHANGE `contact_person` `contact_person` VARCHAR(100);
+Executing (default): ALTER TABLE `projects` CHANGE `contact_info` `contact_info` VARCHAR(100);
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='projects' AND constraint_name = 'projects_ibfk_1' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `projects` DROP FOREIGN KEY `projects_ibfk_1`;
+Executing (default): ALTER TABLE `projects` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): ALTER TABLE `projects` CHANGE `view_count` `view_count` INTEGER DEFAULT 0;
+Executing (default): ALTER TABLE `projects` CHANGE `bid_count` `bid_count` INTEGER DEFAULT 0 COMMENT '投标人数';
+Executing (default): ALTER TABLE `projects` CHANGE `created_at` `created_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `projects` CHANGE `updated_at` `updated_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `projects` CHANGE `deleted_at` `deleted_at` DATETIME;
+Executing (default): ALTER TABLE `projects` CHANGE `attachments` `attachments` JSON COMMENT '附件列表 [{name, url, size, type}]';
+Executing (default): SHOW INDEX FROM `projects`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'orders' AND TABLE_SCHEMA = 'cloud_prosperity'
+Executing (default): SHOW FULL COLUMNS FROM `orders`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'orders' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='cloud_prosperity' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): ALTER TABLE `orders` CHANGE `order_no` `order_no` VARCHAR(50) NOT NULL;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_67' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_67`;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_68' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_68`;
+Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`buyer_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`merchant_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='orders' AND constraint_name = 'orders_ibfk_69' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `orders` DROP FOREIGN KEY `orders_ibfk_69`;
+Executing (default): ALTER TABLE `orders` ADD FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+Executing (default): ALTER TABLE `orders` CHANGE `quantity` `quantity` INTEGER NOT NULL;
+Executing (default): ALTER TABLE `orders` CHANGE `total_price` `total_price` DECIMAL(10,2) NOT NULL;
+Executing (default): ALTER TABLE `orders` CHANGE `status` `status` ENUM('待付款', '待发货', '待收货', '已完成', '已取消', '退单中', '已退单') DEFAULT '待付款';
+Executing (default): ALTER TABLE `orders` CHANGE `payment_status` `payment_status` ENUM('未支付', '已支付', '已退款') DEFAULT '未支付';
+Executing (default): ALTER TABLE `orders` CHANGE `logistics_company` `logistics_company` VARCHAR(100);
+Executing (default): ALTER TABLE `orders` CHANGE `tracking_number` `tracking_number` VARCHAR(100);
+Executing (default): ALTER TABLE `orders` CHANGE `remark` `remark` TEXT;
+Executing (default): ALTER TABLE `orders` CHANGE `return_reason` `return_reason` TEXT COMMENT '退单原因';
+Executing (default): ALTER TABLE `orders` CHANGE `return_quantity` `return_quantity` INTEGER COMMENT '退单数量';
+Executing (default): ALTER TABLE `orders` CHANGE `return_status` `return_status` ENUM('无', '申请中', '已批准', '已拒绝') DEFAULT '无';
+Executing (default): ALTER TABLE `orders` CHANGE `paid_at` `paid_at` DATETIME;
+Executing (default): ALTER TABLE `orders` CHANGE `shipped_at` `shipped_at` DATETIME;
+Executing (default): ALTER TABLE `orders` CHANGE `completed_at` `completed_at` DATETIME;
+Executing (default): ALTER TABLE `orders` CHANGE `created_at` `created_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `orders` CHANGE `updated_at` `updated_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `orders` CHANGE `deleted_at` `deleted_at` DATETIME;
+Executing (default): SHOW INDEX FROM `orders`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'carts' AND TABLE_SCHEMA = 'cloud_prosperity'
+Executing (default): SHOW FULL COLUMNS FROM `carts`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'carts' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='cloud_prosperity' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='carts' AND constraint_name = 'carts_ibfk_45' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `carts` DROP FOREIGN KEY `carts_ibfk_45`;
+Executing (default): ALTER TABLE `carts` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='carts' AND constraint_name = 'carts_ibfk_46' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `carts` DROP FOREIGN KEY `carts_ibfk_46`;
+Executing (default): ALTER TABLE `carts` ADD FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): ALTER TABLE `carts` CHANGE `quantity` `quantity` INTEGER NOT NULL DEFAULT 1;
+Executing (default): ALTER TABLE `carts` CHANGE `created_at` `created_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `carts` CHANGE `updated_at` `updated_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `carts` CHANGE `deleted_at` `deleted_at` DATETIME;
+Executing (default): SHOW INDEX FROM `carts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'bids' AND TABLE_SCHEMA = 'cloud_prosperity'
+Executing (default): SHOW FULL COLUMNS FROM `bids`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'bids' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='cloud_prosperity' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='bids' AND constraint_name = 'bids_ibfk_45' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `bids` DROP FOREIGN KEY `bids_ibfk_45`;
+Executing (default): ALTER TABLE `bids` ADD FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='bids' AND constraint_name = 'bids_ibfk_46' AND TABLE_SCHEMA = 'cloud_prosperity';
+Executing (default): ALTER TABLE `bids` DROP FOREIGN KEY `bids_ibfk_46`;
+Executing (default): ALTER TABLE `bids` ADD FOREIGN KEY (`buyer_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+Executing (default): ALTER TABLE `bids` CHANGE `amount` `amount` DECIMAL(15,2) NOT NULL;
+Executing (default): ALTER TABLE `bids` CHANGE `contact` `contact` VARCHAR(100) NOT NULL;
+Executing (default): ALTER TABLE `bids` CHANGE `phone` `phone` VARCHAR(20) NOT NULL;
+Executing (default): ALTER TABLE `bids` CHANGE `status` `status` ENUM('待处理', '已接受', '已拒绝', '已撤回') DEFAULT '待处理';
+Executing (default): ALTER TABLE `bids` CHANGE `reject_reason` `reject_reason` TEXT COMMENT '拒绝原因';
+Executing (default): ALTER TABLE `bids` CHANGE `bid_date` `bid_date` DATETIME;
+Executing (default): ALTER TABLE `bids` CHANGE `created_at` `created_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `bids` CHANGE `updated_at` `updated_at` DATETIME NOT NULL;
+Executing (default): ALTER TABLE `bids` CHANGE `deleted_at` `deleted_at` DATETIME;
+Executing (default): SHOW INDEX FROM `bids`
+数据库表结构已同步
+服务器运行端口: 3001
+健康检查: http://localhost:3001/health
+数据库状态: http://localhost:3001/api/db/status
+环境: development
+[DEBUG /api/products] where: {}
+[DEBUG /api/products] page: 1 limit: 20 offset: 0
+Executing (default): SELECT `id`, `name`, `description`, `price`, `stock`, `origin`, `image`, `status`, `category`, `user_id` AS `userId`, `view_count` AS `viewCount`, `sales_count` AS `salesCount`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt`, `deleted_at` AS `deletedAt` FROM `products` AS `Product` ORDER BY `createdAt` DESC LIMIT 0, 20;
+[DEBUG /api/products] rows.length: 2
+2026-04-17 18:09:41 [[32MINFO[39M]: GET /api/products 200 - 14ms [RequestID: 6bb765e3-148c-46e6-a4b3-605761dcc379] {"method":"GET","url":"/api/products","status":200,"duration":"14ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.8115"}

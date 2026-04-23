@@ -1,0 +1,2 @@
+ALTER TABLE `project_applications` ADD COLUMN `rejection_reason` VARCHAR(50) NULL AFTER `review_comment`;
+ALTER TABLE `project_applications` ADD COLUMN `rejection_detail` TEXT NULL AFTER `rejection_reason`;

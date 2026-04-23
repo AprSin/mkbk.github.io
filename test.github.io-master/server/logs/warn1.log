@@ -1,0 +1,769 @@
+2026-04-23 12:54:26 [WARN]: GET /api/project-applications 500 - 8ms [RequestID: b16f6f40-2b94-49d5-9d0b-7e5f781f2c45] {"method":"GET","url":"/api/project-applications","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 12:54:28 [ERROR]: 500 - 数据库操作失败: Unknown column 'ProjectApplication.rejection_reason' in 'field list' - /api/project-applications - GET - ::ffff:127.0.0.1 [RequestID: 56825249-9d80-48ab-88a3-4e2f7316baef] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProjectApplication.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProjectApplication.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\projectApplications.js:42:29
+2026-04-23 12:54:28 [WARN]: GET /api/project-applications 500 - 7ms [RequestID: 56825249-9d80-48ab-88a3-4e2f7316baef] {"method":"GET","url":"/api/project-applications","status":500,"duration":"7ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 12:54:31 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 821c73b6-c2a4-4777-a94e-673dff7777fa] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 12:54:31 [WARN]: GET /api/product-publish-requests 500 - 6ms [RequestID: 821c73b6-c2a4-4777-a94e-673dff7777fa] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 12:54:32 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 49a1f7a8-732f-471d-a42a-66682115c15c] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 12:54:32 [WARN]: GET /api/product-publish-requests 500 - 4ms [RequestID: 49a1f7a8-732f-471d-a42a-66682115c15c] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 12:54:34 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 6b28e0c7-b801-4397-bf7c-eac9374f3b75] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 12:54:34 [WARN]: GET /api/product-publish-requests 500 - 8ms [RequestID: 6b28e0c7-b801-4397-bf7c-eac9374f3b75] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 12:56:20 [ERROR]: 500 - 数据库操作失败: Unknown column 'rejection_reason' in 'field list' - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 7a61ad75-42b0-4161-bc73-261162c7857c] {"body":{"name":"玛卡巴卡星球第一庄园","type":"宅基地","description":"玛卡巴卡星最厉害","area":"10000000平米","price":100000,"location":"玛卡巴卡星球","contactPerson":"玛卡巴卡大帅","contactInfo":"110","bidEndDate":"2027-03-05","attachments":[{"name":"è½¦é´è®¾å¤æ«ç å·¡æ£ç®¡çç³»ç».pdf","url":"/api/uploads/a2937b0d-f0a1-4d1e-bd36-7db630558fc9.pdf","size":476253,"type":".pdf","originalName":"è½¦é´è®¾å¤æ«ç å·¡æ£ç®¡çç³»ç».pdf","filename":"a2937b0d-f0a1-4d1e-bd36-7db630558fc9.pdf"}]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProjectApplication.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async ProjectApplication.findOne (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1240:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:128:29
+2026-04-23 12:56:20 [WARN]: POST /api/projects 500 - 4ms [RequestID: 7a61ad75-42b0-4161-bc73-261162c7857c] {"method":"POST","url":"/api/projects","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 12:56:21 [ERROR]: 500 - 数据库操作失败: Unknown column 'rejection_reason' in 'field list' - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: b8000947-daf8-482b-830a-cb8fb213f3e8] {"body":{"name":"玛卡巴卡星球第一庄园","type":"宅基地","description":"玛卡巴卡星最厉害","area":"10000000平米","price":100000,"location":"玛卡巴卡星球","contactPerson":"玛卡巴卡大帅","contactInfo":"110","bidEndDate":"2027-03-05","attachments":[{"name":"è½¦é´è®¾å¤æ«ç å·¡æ£ç®¡çç³»ç».pdf","url":"/api/uploads/a2937b0d-f0a1-4d1e-bd36-7db630558fc9.pdf","size":476253,"type":".pdf","originalName":"è½¦é´è®¾å¤æ«ç å·¡æ£ç®¡çç³»ç».pdf","filename":"a2937b0d-f0a1-4d1e-bd36-7db630558fc9.pdf"}]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProjectApplication.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async ProjectApplication.findOne (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1240:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:128:29
+2026-04-23 12:56:21 [WARN]: POST /api/projects 500 - 4ms [RequestID: b8000947-daf8-482b-830a-cb8fb213f3e8] {"method":"POST","url":"/api/projects","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 12:56:23 [ERROR]: 500 - 数据库操作失败: Unknown column 'rejection_reason' in 'field list' - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: cf123312-85ab-4014-85a9-e328bfaa35f8] {"body":{"name":"玛卡巴卡星球第一庄园","type":"宅基地","description":"玛卡巴卡星最厉害","area":"10000000平米","price":100000,"location":"玛卡巴卡星球","contactPerson":"玛卡巴卡大帅","contactInfo":"110","bidEndDate":"2027-03-05","attachments":[{"name":"è½¦é´è®¾å¤æ«ç å·¡æ£ç®¡çç³»ç».pdf","url":"/api/uploads/a2937b0d-f0a1-4d1e-bd36-7db630558fc9.pdf","size":476253,"type":".pdf","originalName":"è½¦é´è®¾å¤æ«ç å·¡æ£ç®¡çç³»ç».pdf","filename":"a2937b0d-f0a1-4d1e-bd36-7db630558fc9.pdf"}]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProjectApplication.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async ProjectApplication.findOne (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1240:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:128:29
+2026-04-23 12:56:23 [WARN]: POST /api/projects 500 - 4ms [RequestID: cf123312-85ab-4014-85a9-e328bfaa35f8] {"method":"POST","url":"/api/projects","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 12:58:30 [ERROR]: 500 - Request aborted - /api/uploads - POST - undefined [RequestID: 24f672c9-7a70-427f-bb62-c3c61f4269bf] {"body":{},"params":{},"query":{}}
+Error: Request aborted
+    at IncomingMessage.<anonymous> (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\multer\lib\make-middleware.js:118:28)
+    at IncomingMessage.emit (node:events:508:28)
+    at IncomingMessage._destroy (node:_http_incoming:221:10)
+    at _destroy (node:internal/streams/destroy:122:10)
+    at IncomingMessage.destroy (node:internal/streams/destroy:84:5)
+    at abortIncoming (node:_http_server:845:9)
+    at socketOnClose (node:_http_server:839:3)
+    at Socket.emit (node:events:520:35)
+    at TCP.<anonymous> (node:net:346:12)
+2026-04-23 12:58:59 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 7ea3d10f-c365-4be2-8502-cb26097226ca] {"body":{"name":"test","type":"宅基地","description":"122","area":"121","price":21,"location":"12","contactPerson":"21","contactInfo":"212","bidEndDate":"2026-05-05","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 12:58:59 [WARN]: POST /api/projects 400 - 2ms [RequestID: 7ea3d10f-c365-4be2-8502-cb26097226ca] {"method":"POST","url":"/api/projects","status":400,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 12:59:00 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: d27a4b67-ab0a-4ff7-98dd-3a3e61192f00] {"body":{"name":"test","type":"宅基地","description":"122","area":"121","price":21,"location":"12","contactPerson":"21","contactInfo":"212","bidEndDate":"2026-05-05","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 12:59:00 [WARN]: POST /api/projects 400 - 6ms [RequestID: d27a4b67-ab0a-4ff7-98dd-3a3e61192f00] {"method":"POST","url":"/api/projects","status":400,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 12:59:02 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 0a79a953-d429-442d-bb92-5e75deb542d1] {"body":{"name":"test","type":"宅基地","description":"122","area":"121","price":21,"location":"12","contactPerson":"21","contactInfo":"212","bidEndDate":"2026-05-05","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 12:59:02 [WARN]: POST /api/projects 400 - 4ms [RequestID: 0a79a953-d429-442d-bb92-5e75deb542d1] {"method":"POST","url":"/api/projects","status":400,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:03:15 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 4966ea5b-b037-4d6d-8b85-43cd0c7e46b7] {"body":{"name":"你好","type":"宅基地","description":"12","area":"312","price":1323,"location":"21","contactPerson":"321","contactInfo":"213","bidEndDate":"2026-05-09","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:03:15 [WARN]: POST /api/projects 400 - 34ms [RequestID: 4966ea5b-b037-4d6d-8b85-43cd0c7e46b7] {"method":"POST","url":"/api/projects","status":400,"duration":"34ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:03:16 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 80e8eb90-f5a0-4dd1-9941-7f1c72e1a923] {"body":{"name":"你好","type":"宅基地","description":"12","area":"312","price":1323,"location":"21","contactPerson":"321","contactInfo":"213","bidEndDate":"2026-05-09","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:03:16 [WARN]: POST /api/projects 400 - 7ms [RequestID: 80e8eb90-f5a0-4dd1-9941-7f1c72e1a923] {"method":"POST","url":"/api/projects","status":400,"duration":"7ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:03:19 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: f5215cbc-7cb4-49d7-a70f-d286ae91da8a] {"body":{"name":"你好","type":"宅基地","description":"12","area":"312","price":1323,"location":"21","contactPerson":"321","contactInfo":"213","bidEndDate":"2026-05-09","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:03:19 [WARN]: POST /api/projects 400 - 6ms [RequestID: f5215cbc-7cb4-49d7-a70f-d286ae91da8a] {"method":"POST","url":"/api/projects","status":400,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:03:28 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 17ae3731-161e-4ca8-b7f7-21fee2829f36] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 13:03:28 [WARN]: GET /api/product-publish-requests 500 - 7ms [RequestID: 17ae3731-161e-4ca8-b7f7-21fee2829f36] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"7ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 13:03:29 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: cce0bc32-4657-4138-86a8-c4ee7f27c5e0] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 13:03:29 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: cce0bc32-4657-4138-86a8-c4ee7f27c5e0] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 13:03:31 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: ca3390b3-67ef-426f-be30-5efd21d67554] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 13:03:31 [WARN]: GET /api/product-publish-requests 500 - 8ms [RequestID: ca3390b3-67ef-426f-be30-5efd21d67554] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 13:12:54 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 1f1a84aa-87ff-4c13-a132-7fcd0f5fad06] {"body":{"name":"21321","description":"32131","area":"31","price":13,"location":"13131","contactPerson":"131","contactInfo":"13","bidEndDate":"2026-05-08","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:163:21
+2026-04-23 13:12:54 [WARN]: POST /api/projects 500 - 18ms [RequestID: 1f1a84aa-87ff-4c13-a132-7fcd0f5fad06] {"method":"POST","url":"/api/projects","status":500,"duration":"18ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:12:55 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 04f10bc3-9e64-4dfc-bab8-e9455be5f619] {"body":{"name":"21321","description":"32131","area":"31","price":13,"location":"13131","contactPerson":"131","contactInfo":"13","bidEndDate":"2026-05-08","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:12:55 [WARN]: POST /api/projects 400 - 4ms [RequestID: 04f10bc3-9e64-4dfc-bab8-e9455be5f619] {"method":"POST","url":"/api/projects","status":400,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:12:57 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 0d831616-c2f5-4a1b-8194-ab9372b70eda] {"body":{"name":"21321","description":"32131","area":"31","price":13,"location":"13131","contactPerson":"131","contactInfo":"13","bidEndDate":"2026-05-08","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:12:57 [WARN]: POST /api/projects 400 - 6ms [RequestID: 0d831616-c2f5-4a1b-8194-ab9372b70eda] {"method":"POST","url":"/api/projects","status":400,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:13:04 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: dccbfa08-413d-498c-8105-2d7fb95dfb71] {"body":{"name":"21321231312","description":"32131","area":"31","price":13,"location":"13131","contactPerson":"131","contactInfo":"13","bidEndDate":"2026-05-08","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:163:21
+2026-04-23 13:13:04 [WARN]: POST /api/projects 500 - 5ms [RequestID: dccbfa08-413d-498c-8105-2d7fb95dfb71] {"method":"POST","url":"/api/projects","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:13:05 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 94d9e91d-8299-40ac-b252-972bb445ddc9] {"body":{"name":"21321231312","description":"32131","area":"31","price":13,"location":"13131","contactPerson":"131","contactInfo":"13","bidEndDate":"2026-05-08","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:13:05 [WARN]: POST /api/projects 400 - 5ms [RequestID: 94d9e91d-8299-40ac-b252-972bb445ddc9] {"method":"POST","url":"/api/projects","status":400,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:13:08 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 683c8ddd-d95f-41c7-b097-dd445fbb729c] {"body":{"name":"21321231312","description":"32131","area":"31","price":13,"location":"13131","contactPerson":"131","contactInfo":"13","bidEndDate":"2026-05-08","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:138:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:13:08 [WARN]: POST /api/projects 400 - 5ms [RequestID: 683c8ddd-d95f-41c7-b097-dd445fbb729c] {"method":"POST","url":"/api/projects","status":400,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:38:37 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 0b036fdf-0e04-4554-9ae5-0470eca6cc49] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 13:38:37 [WARN]: GET /api/product-publish-requests 500 - 8ms [RequestID: 0b036fdf-0e04-4554-9ae5-0470eca6cc49] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 13:38:38 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: f3208a55-458e-45e8-9534-5f6c5a659771] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 13:38:38 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: f3208a55-458e-45e8-9534-5f6c5a659771] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 13:38:40 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 470cd642-80da-4458-9a19-75194037f418] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 13:38:40 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: 470cd642-80da-4458-9a19-75194037f418] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 13:39:23 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: b2b82478-f589-466b-9cc3-9feca7ae0070] {"body":{"name":"12","description":"12","area":"123","price":1231,"location":"31","contactPerson":"123","contactInfo":"131","bidEndDate":"2026-04-18","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:167:21
+2026-04-23 13:39:23 [WARN]: POST /api/projects 500 - 12ms [RequestID: b2b82478-f589-466b-9cc3-9feca7ae0070] {"method":"POST","url":"/api/projects","status":500,"duration":"12ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:39:24 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 15fa96d2-ac58-4676-8873-e311111c0e32] {"body":{"name":"12","description":"12","area":"123","price":1231,"location":"31","contactPerson":"123","contactInfo":"131","bidEndDate":"2026-04-18","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:142:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:39:24 [WARN]: POST /api/projects 400 - 5ms [RequestID: 15fa96d2-ac58-4676-8873-e311111c0e32] {"method":"POST","url":"/api/projects","status":400,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:39:26 [ERROR]: 400 - 您已提交过相同名称的项目发布申请，请等待审核完成 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 7d02db20-03f4-4db4-875f-8d28accebdbe] {"body":{"name":"12","description":"12","area":"123","price":1231,"location":"31","contactPerson":"123","contactInfo":"131","bidEndDate":"2026-04-18","attachments":[]},"params":{},"query":{}}
+Error: 您已提交过相同名称的项目发布申请，请等待审核完成
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:142:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 13:39:26 [WARN]: POST /api/projects 400 - 4ms [RequestID: 7d02db20-03f4-4db4-875f-8d28accebdbe] {"method":"POST","url":"/api/projects","status":400,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:43:43 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: c97fd7b8-0eaf-40c6-ba26-40448fd35bf2] {"body":{"name":"321","description":"21321321","area":"321","price":3312,"location":"313","contactPerson":"12","contactInfo":"23213","bidEndDate":"2026-04-04","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:152:21
+2026-04-23 13:43:43 [WARN]: POST /api/projects 500 - 15ms [RequestID: c97fd7b8-0eaf-40c6-ba26-40448fd35bf2] {"method":"POST","url":"/api/projects","status":500,"duration":"15ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:43:45 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: fa0ec7c8-fbab-4b74-995b-b18cbeb40609] {"body":{"name":"321","description":"21321321","area":"321","price":3312,"location":"313","contactPerson":"12","contactInfo":"23213","bidEndDate":"2026-04-04","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:152:21
+2026-04-23 13:43:45 [WARN]: POST /api/projects 500 - 5ms [RequestID: fa0ec7c8-fbab-4b74-995b-b18cbeb40609] {"method":"POST","url":"/api/projects","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:43:47 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 2a1272bc-7272-488d-9b6b-7503292bca59] {"body":{"name":"321","description":"21321321","area":"321","price":3312,"location":"313","contactPerson":"12","contactInfo":"23213","bidEndDate":"2026-04-04","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:152:21
+2026-04-23 13:43:47 [WARN]: POST /api/projects 500 - 13ms [RequestID: 2a1272bc-7272-488d-9b6b-7503292bca59] {"method":"POST","url":"/api/projects","status":500,"duration":"13ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:47:58 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 292b2e27-37f5-42b1-8b35-06ad58019554] {"body":{"name":"12312","description":"312","area":"3213","price":32131,"location":"3113","contactPerson":"321","contactInfo":"1312","bidEndDate":"2026-05-10","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:152:21
+2026-04-23 13:47:58 [WARN]: POST /api/projects 500 - 10ms [RequestID: 292b2e27-37f5-42b1-8b35-06ad58019554] {"method":"POST","url":"/api/projects","status":500,"duration":"10ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:47:59 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 369eed43-b42b-4ac0-bf71-003900e00d3c] {"body":{"name":"12312","description":"312","area":"3213","price":32131,"location":"3113","contactPerson":"321","contactInfo":"1312","bidEndDate":"2026-05-10","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:152:21
+2026-04-23 13:47:59 [WARN]: POST /api/projects 500 - 9ms [RequestID: 369eed43-b42b-4ac0-bf71-003900e00d3c] {"method":"POST","url":"/api/projects","status":500,"duration":"9ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:48:01 [ERROR]: 500 - 数据库操作失败: Data truncated for column 'status' at row 1 - /api/projects - POST - ::ffff:127.0.0.1 [RequestID: 2ecb3cff-a3dd-48ca-b950-e083c9fb5f01] {"body":{"name":"12312","description":"312","area":"3213","price":32131,"location":"3113","contactPerson":"321","contactInfo":"1312","bidEndDate":"2026-05-10","attachments":[]},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Project.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\project.js:152:21
+2026-04-23 13:48:01 [WARN]: POST /api/projects 500 - 8ms [RequestID: 2ecb3cff-a3dd-48ca-b950-e083c9fb5f01] {"method":"POST","url":"/api/projects","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:51:39 [ERROR]: 500 - 数据库操作失败: Out of range value for column 'stock' at row 1 - /api/products - POST - ::ffff:127.0.0.1 [RequestID: 9201235b-b310-477e-8fce-574d37be3509] {"body":{"name":"32132112312313","price":3213213,"stock":21321321313,"origin":"312321","description":"321313","category":"","image":"","shippingTime":"3天内发货"},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Product.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\product.js:159:21
+2026-04-23 13:51:39 [WARN]: POST /api/products 500 - 15ms [RequestID: 9201235b-b310-477e-8fce-574d37be3509] {"method":"POST","url":"/api/products","status":500,"duration":"15ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:51:40 [ERROR]: 500 - 数据库操作失败: Out of range value for column 'stock' at row 1 - /api/products - POST - ::ffff:127.0.0.1 [RequestID: e2f5f113-2ec2-409a-9702-901e88fd04cc] {"body":{"name":"32132112312313","price":3213213,"stock":21321321313,"origin":"312321","description":"321313","category":"","image":"","shippingTime":"3天内发货"},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Product.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\product.js:159:21
+2026-04-23 13:51:40 [WARN]: POST /api/products 500 - 6ms [RequestID: e2f5f113-2ec2-409a-9702-901e88fd04cc] {"method":"POST","url":"/api/products","status":500,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 13:51:42 [ERROR]: 500 - 数据库操作失败: Out of range value for column 'stock' at row 1 - /api/products - POST - ::ffff:127.0.0.1 [RequestID: 65f0e255-edd4-47b7-9918-ffcde20c449a] {"body":{"name":"32132112312313","price":3213213,"stock":21321321313,"origin":"312321","description":"321313","category":"","image":"","shippingTime":"3天内发货"},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.insert (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async Product.create (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\product.js:159:21
+2026-04-23 13:51:42 [WARN]: POST /api/products 500 - 14ms [RequestID: 65f0e255-edd4-47b7-9918-ffcde20c449a] {"method":"POST","url":"/api/products","status":500,"duration":"14ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":48}
+2026-04-23 14:05:32 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: fdf98193-c452-47bc-a7a0-83aa9c6e016c] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:32 [WARN]: GET /api/product-publish-requests 500 - 4ms [RequestID: fdf98193-c452-47bc-a7a0-83aa9c6e016c] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:33 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 9eb0f9ab-74e4-42c6-8438-20a7c4e998b7] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:33 [WARN]: GET /api/product-publish-requests 500 - 10ms [RequestID: 9eb0f9ab-74e4-42c6-8438-20a7c4e998b7] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"10ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:34 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 37583697-6ae7-4d24-9de1-a17227ff00ae] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:34 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: 37583697-6ae7-4d24-9de1-a17227ff00ae] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:35 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 9391727f-6322-46e5-8265-5fa81c237f6a] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:35 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: 9391727f-6322-46e5-8265-5fa81c237f6a] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:37 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: fbce576c-9942-4f23-a59c-5428e280cc06] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:37 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: fbce576c-9942-4f23-a59c-5428e280cc06] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:42 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 73ea3e13-385d-4794-a59f-5730209720e4] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:42 [WARN]: GET /api/product-publish-requests 500 - 6ms [RequestID: 73ea3e13-385d-4794-a59f-5730209720e4] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:44 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 2911abe3-6c48-4251-8b72-a9525f076611] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:44 [WARN]: GET /api/product-publish-requests 500 - 2ms [RequestID: 2911abe3-6c48-4251-8b72-a9525f076611] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:05:47 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: e0ba4439-95df-4f66-a467-679fd5e12e26] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:05:47 [WARN]: GET /api/product-publish-requests 500 - 4ms [RequestID: e0ba4439-95df-4f66-a467-679fd5e12e26] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:06:30 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 078bd297-2802-4fba-9711-53c446bf9c50] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:06:30 [WARN]: GET /api/product-publish-requests 500 - 4ms [RequestID: 078bd297-2802-4fba-9711-53c446bf9c50] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:06:32 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 2567787d-f6c2-448f-9755-ed93ae08496b] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:06:32 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: 2567787d-f6c2-448f-9755-ed93ae08496b] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:06:35 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: d7a3440a-db17-4fa1-9a35-b97e072dfa9a] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:06:35 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: d7a3440a-db17-4fa1-9a35-b97e072dfa9a] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:30 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 7dfb99fc-81a3-4c32-852c-ab38c0f54d89] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:30 [WARN]: GET /api/product-publish-requests 500 - 10ms [RequestID: 7dfb99fc-81a3-4c32-852c-ab38c0f54d89] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"10ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:31 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 60513c65-9408-42a0-8317-c205c66e6831] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:31 [WARN]: GET /api/product-publish-requests 500 - 6ms [RequestID: 60513c65-9408-42a0-8317-c205c66e6831] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:34 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 50f44718-8c11-4303-8bc4-bb0b76628854] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:34 [WARN]: GET /api/product-publish-requests 500 - 8ms [RequestID: 50f44718-8c11-4303-8bc4-bb0b76628854] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:35 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 3028297b-5b04-47c9-881d-2eafe33ca90f] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:35 [WARN]: GET /api/product-publish-requests 500 - 6ms [RequestID: 3028297b-5b04-47c9-881d-2eafe33ca90f] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:36 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 18c58c36-933f-47a6-9944-5b9819aeab62] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:36 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: 18c58c36-933f-47a6-9944-5b9819aeab62] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:38 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: c79225f1-3c39-412a-83a4-dd175f3ebcac] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:38 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: c79225f1-3c39-412a-83a4-dd175f3ebcac] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:38 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 71562ed6-abe9-416d-943d-dba023d4556b] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:38 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: 71562ed6-abe9-416d-943d-dba023d4556b] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:39 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 12b98bf0-9723-45e9-955f-93def6bd9f29] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:39 [WARN]: GET /api/product-publish-requests 500 - 4ms [RequestID: 12b98bf0-9723-45e9-955f-93def6bd9f29] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:40 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 7bfc599b-ec35-4d70-b319-15d17851e340] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:40 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: 7bfc599b-ec35-4d70-b319-15d17851e340] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:42 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 6ee4d1e8-b6ea-43a0-a72f-2d379ab0ca7c] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:42 [WARN]: GET /api/product-publish-requests 500 - 6ms [RequestID: 6ee4d1e8-b6ea-43a0-a72f-2d379ab0ca7c] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"6ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:42 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 6eab6d28-1f72-4681-b5a6-8f3e0b32994a] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:42 [WARN]: GET /api/product-publish-requests 500 - 8ms [RequestID: 6eab6d28-1f72-4681-b5a6-8f3e0b32994a] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:09:45 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 35722491-ebfe-414a-8cf3-a3542b16e4f7] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:09:45 [WARN]: GET /api/product-publish-requests 500 - 3ms [RequestID: 35722491-ebfe-414a-8cf3-a3542b16e4f7] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0","userId":45}
+2026-04-23 14:10:52 [ERROR]: 500 - 数据库操作失败: Unknown column 'merchant.companyName' in 'field list' - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 2305937d-8023-46dc-903a-dd3603140e0f] {"body":{},"params":{},"query":{}}
+Error
+    at Query.run (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async MySQLQueryInterface.select (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:407:12)
+    at async ProductPublishRequest.findAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1140:21)
+    at async Promise.all (index 1)
+    at async ProductPublishRequest.findAndCountAll (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\sequelize\lib\model.js:1322:27)
+    at async D:\trae\test.github.io-master\test.github.io-master\server\src\routes\productPublishRequests.js:112:29
+2026-04-23 14:10:52 [WARN]: GET /api/product-publish-requests 500 - 5ms [RequestID: 2305937d-8023-46dc-903a-dd3603140e0f] {"method":"GET","url":"/api/product-publish-requests","status":500,"duration":"5ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.26100.8115","userId":45}
+2026-04-23 14:48:14 [ERROR]: 400 - 账户类型不匹配 - /api/auth/login - POST - ::ffff:127.0.0.1 [RequestID: d54c7488-430b-44bb-b081-d221b8e98c70] {"body":{"username":"woshizhangzi","password":"201952019wC.","accountType":"merchant"},"params":{},"query":{}}
+Error: 账户类型不匹配
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\auth.js:120:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 14:48:14 [WARN]: POST /api/auth/login 400 - 3ms [RequestID: d54c7488-430b-44bb-b081-d221b8e98c70] {"method":"POST","url":"/api/auth/login","status":400,"duration":"3ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit"}
+2026-04-23 14:48:15 [ERROR]: 400 - 账户类型不匹配 - /api/auth/login - POST - ::ffff:127.0.0.1 [RequestID: 17353ae0-fdc8-491e-a816-6ce8c48285e9] {"body":{"username":"woshizhangzi","password":"201952019wC.","accountType":"merchant"},"params":{},"query":{}}
+Error: 账户类型不匹配
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\auth.js:120:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 14:48:15 [WARN]: POST /api/auth/login 400 - 4ms [RequestID: 17353ae0-fdc8-491e-a816-6ce8c48285e9] {"method":"POST","url":"/api/auth/login","status":400,"duration":"4ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit"}
+2026-04-23 14:48:17 [ERROR]: 400 - 账户类型不匹配 - /api/auth/login - POST - ::ffff:127.0.0.1 [RequestID: 4beeaa4d-35fd-4561-a2af-69d1fc77a0ea] {"body":{"username":"woshizhangzi","password":"201952019wC.","accountType":"merchant"},"params":{},"query":{}}
+Error: 账户类型不匹配
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\auth.js:120:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 14:48:17 [WARN]: POST /api/auth/login 400 - 1ms [RequestID: 4beeaa4d-35fd-4561-a2af-69d1fc77a0ea] {"method":"POST","url":"/api/auth/login","status":400,"duration":"1ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit"}
+2026-04-23 14:54:37 [ERROR]: 500 - request is not defined - /api/products - POST - ::ffff:127.0.0.1 [RequestID: f7c506d6-3f99-4d7d-a1e9-c09a4aa47d01] {"body":{"name":"王烁果","type":"禽蛋","price":100,"stock":100,"origin":"王烁","description":"王烁","category":"","image":"","shippingTime":"预售"},"params":{},"query":{}}
+ReferenceError: request is not defined
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\product.js:206:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 14:54:37 [WARN]: POST /api/products 500 - 13ms [RequestID: f7c506d6-3f99-4d7d-a1e9-c09a4aa47d01] {"method":"POST","url":"/api/products","status":500,"duration":"13ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":50}
+2026-04-23 14:54:39 [ERROR]: 500 - request is not defined - /api/products - POST - ::ffff:127.0.0.1 [RequestID: 848f7c3a-e682-4ce5-b606-207c0608d6e1] {"body":{"name":"王烁果","type":"禽蛋","price":100,"stock":100,"origin":"王烁","description":"王烁","category":"","image":"","shippingTime":"预售"},"params":{},"query":{}}
+ReferenceError: request is not defined
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\product.js:206:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 14:54:39 [WARN]: POST /api/products 500 - 8ms [RequestID: 848f7c3a-e682-4ce5-b606-207c0608d6e1] {"method":"POST","url":"/api/products","status":500,"duration":"8ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":50}
+2026-04-23 14:54:41 [ERROR]: 500 - request is not defined - /api/products - POST - ::ffff:127.0.0.1 [RequestID: 6aff0639-14f6-41a6-b4c0-96b4929fae91] {"body":{"name":"王烁果","type":"禽蛋","price":100,"stock":100,"origin":"王烁","description":"王烁","category":"","image":"","shippingTime":"预售"},"params":{},"query":{}}
+ReferenceError: request is not defined
+    at D:\trae\test.github.io-master\test.github.io-master\server\src\routes\product.js:206:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-04-23 14:54:41 [WARN]: POST /api/products 500 - 10ms [RequestID: 6aff0639-14f6-41a6-b4c0-96b4929fae91] {"method":"POST","url":"/api/products","status":500,"duration":"10ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 SLBrowser/9.0.8.3131 SLBChan/112 SLBVPV/64-bit","userId":50}
+2026-04-23 14:55:41 [ERROR]: 401 - 令牌验证失败 - /api/users - GET - ::ffff:127.0.0.1 [RequestID: 04b9ac6d-6df1-45fe-b63e-584c51c1da27] {"body":{},"params":{},"query":{}}
+Error: 令牌验证失败
+    at verifyToken (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:27:11)
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:40:21)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+2026-04-23 14:55:41 [WARN]: GET /api/users 401 - 2ms [RequestID: 04b9ac6d-6df1-45fe-b63e-584c51c1da27] {"method":"GET","url":"/api/users","status":401,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:41 [ERROR]: 401 - 令牌验证失败 - /api/orders - GET - ::ffff:127.0.0.1 [RequestID: 82523b36-0657-4437-af26-16742ab3aad0] {"body":{},"params":{},"query":{}}
+Error: 令牌验证失败
+    at verifyToken (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:27:11)
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:40:21)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+2026-04-23 14:55:41 [WARN]: GET /api/orders 401 - 2ms [RequestID: 82523b36-0657-4437-af26-16742ab3aad0] {"method":"GET","url":"/api/orders","status":401,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:41 [ERROR]: 401 - 令牌验证失败 - /api/bids?page=1&size=10 - GET - ::ffff:127.0.0.1 [RequestID: 7750fd8b-1903-40d0-858c-9969cb5bc7b8] {"body":{},"params":{},"query":{"page":"1","size":"10"}}
+Error: 令牌验证失败
+    at verifyToken (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:27:11)
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:40:21)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+2026-04-23 14:55:41 [WARN]: GET /api/bids?page=1&size=10 401 - 1ms [RequestID: 7750fd8b-1903-40d0-858c-9969cb5bc7b8] {"method":"GET","url":"/api/bids?page=1&size=10","status":401,"duration":"1ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:42 [ERROR]: 401 - 未提供认证令牌 - /api/users - GET - ::ffff:127.0.0.1 [RequestID: d262a9e7-7933-4d40-aa7d-3c824e022778] {"body":{},"params":{},"query":{}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:42 [WARN]: GET /api/users 401 - 2ms [RequestID: d262a9e7-7933-4d40-aa7d-3c824e022778] {"method":"GET","url":"/api/users","status":401,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:42 [ERROR]: 401 - 未提供认证令牌 - /api/orders - GET - ::ffff:127.0.0.1 [RequestID: 8cd9faf6-1505-4629-ba31-7df8b5420b20] {"body":{},"params":{},"query":{}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:42 [WARN]: GET /api/orders 401 - 1ms [RequestID: 8cd9faf6-1505-4629-ba31-7df8b5420b20] {"method":"GET","url":"/api/orders","status":401,"duration":"1ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:42 [ERROR]: 401 - 未提供认证令牌 - /api/bids?page=1&size=10 - GET - ::ffff:127.0.0.1 [RequestID: 3c8bd847-2eba-41a8-bbf3-f7f386cd7858] {"body":{},"params":{},"query":{"page":"1","size":"10"}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:42 [WARN]: GET /api/bids?page=1&size=10 401 - 0ms [RequestID: 3c8bd847-2eba-41a8-bbf3-f7f386cd7858] {"method":"GET","url":"/api/bids?page=1&size=10","status":401,"duration":"0ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:43 [ERROR]: 401 - 未提供认证令牌 - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 53291c88-d2f5-472e-aaad-8cf5c4678d96] {"body":{},"params":{},"query":{}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:43 [WARN]: GET /api/product-publish-requests 401 - 1ms [RequestID: 53291c88-d2f5-472e-aaad-8cf5c4678d96] {"method":"GET","url":"/api/product-publish-requests","status":401,"duration":"1ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:44 [ERROR]: 401 - 未提供认证令牌 - /api/users - GET - ::ffff:127.0.0.1 [RequestID: 7197710a-83d0-40ae-a609-672373f8acbd] {"body":{},"params":{},"query":{}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:44 [WARN]: GET /api/users 401 - 2ms [RequestID: 7197710a-83d0-40ae-a609-672373f8acbd] {"method":"GET","url":"/api/users","status":401,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:44 [ERROR]: 401 - 未提供认证令牌 - /api/product-publish-requests - GET - ::ffff:127.0.0.1 [RequestID: 3b1d161d-a9a1-4af9-ac57-9af0ac9515b5] {"body":{},"params":{},"query":{}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:44 [WARN]: GET /api/product-publish-requests 401 - 2ms [RequestID: 3b1d161d-a9a1-4af9-ac57-9af0ac9515b5] {"method":"GET","url":"/api/product-publish-requests","status":401,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:44 [ERROR]: 401 - 未提供认证令牌 - /api/orders - GET - ::ffff:127.0.0.1 [RequestID: 4de18115-76d3-49f1-b1ad-994e9814f1e6] {"body":{},"params":{},"query":{}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:44 [WARN]: GET /api/orders 401 - 0ms [RequestID: 4de18115-76d3-49f1-b1ad-994e9814f1e6] {"method":"GET","url":"/api/orders","status":401,"duration":"0ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
+2026-04-23 14:55:44 [ERROR]: 401 - 未提供认证令牌 - /api/bids?page=1&size=10 - GET - ::ffff:127.0.0.1 [RequestID: 47a32d25-8d26-4c55-b530-00b2a9da427b] {"body":{},"params":{},"query":{"page":"1","size":"10"}}
+Error: 未提供认证令牌
+    at authenticate (D:\trae\test.github.io-master\test.github.io-master\server\src\middleware\auth.js:36:13)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\layer.js:95:5)
+    at D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:346:12)
+    at next (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:280:10)
+    at router.handle (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:175:3)
+    at router (D:\trae\test.github.io-master\test.github.io-master\server\node_modules\express\lib\router\index.js:47:12)
+2026-04-23 14:55:44 [WARN]: GET /api/bids?page=1&size=10 401 - 2ms [RequestID: 47a32d25-8d26-4c55-b530-00b2a9da427b] {"method":"GET","url":"/api/bids?page=1&size=10","status":401,"duration":"2ms","ip":"::ffff:127.0.0.1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"}
