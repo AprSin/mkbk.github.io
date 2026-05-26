@@ -242,7 +242,7 @@ export default {
     // 统计数据 - 响应式，与 Data.vue 保持联动
     const statistics = reactive([
       { type: 'projects', label: '累计交易项目', value: 0, unit: '个', trend: 0, animate: false },
-      { type: 'amount', label: '累计交易金额', value: 0, unit: '万元', trend: 0, animate: false },
+      { type: 'amount', label: '累计交易金额', value: 0, unit: '元', trend: 0, animate: false },
       { type: 'success', label: '交易成功率', value: 0, unit: '%', trend: 0, animate: false },
       { type: 'users', label: '活跃用户数', value: 0, unit: '人', trend: 0, animate: false }
     ])

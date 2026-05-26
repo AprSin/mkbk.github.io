@@ -61,7 +61,7 @@ class ChartService {
             yAxisID: 'y'
           },
           {
-            label: '交易金额 (万元)',
+            label: '交易金额 (元)',
             data: amounts,
             borderColor: '#2196F3',
             backgroundColor: 'rgba(33, 150, 243, 0.1)',
@@ -432,14 +432,14 @@ class ChartService {
     })
 
     const labels = merchantStats.map(m => merchantMap[m.merchantId] || '未知商户')
-    const data = merchantStats.map(m => Math.round((parseFloat(m.totalAmount) || 0) / 10000 * 100) / 100)
+    const data = merchantStats.map(m => Math.round(parseFloat(m.totalAmount) || 0))
 
     return {
       type: 'bar',
       data: {
         labels,
         datasets: [{
-          label: '交易金额 (万元)',
+          label: '交易金额 (元)',
           data,
           backgroundColor: '#4CAF50',
           borderColor: '#388E3C',
@@ -468,7 +468,7 @@ class ChartService {
           x: {
             title: {
               display: true,
-              text: '交易金额 (万元)',
+              text: '交易金额 (元)',
               font: {
                 family: '"Microsoft YaHei", "SimHei", sans-serif'
               }
@@ -594,7 +594,7 @@ class ChartService {
           id: o.orderNo,
           name: o.product?.name || '未知商品',
           type: o.product ? '农产品' : '项目',
-          amount: parseFloat(o.totalPrice) / 10000, // 转换为万元
+          amount: parseFloat(o.totalPrice), // 使用元作为单位
           date: o.createdAt,
           status: o.status === '已完成' ? 'success' : o.status === '已取消' ? 'failed' : 'processing',
           statusText: o.status,
@@ -610,7 +610,7 @@ class ChartService {
         // 顶部统计卡片数据
         overview: {
           totalProjects: totalOrders + totalProjects,
-          totalAmount: Math.round((totalAmount || 0) / 10000 * 100) / 100,
+          totalAmount: Math.round(totalAmount || 0), // 使用元作为单位
           successRate,
           activeUsers,
           totalOrders,

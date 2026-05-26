@@ -168,8 +168,8 @@ export const useOrderStore = defineStore('order', () => {
         bidPagination.value = {
           page: result.pagination.page || page,
           size: result.pagination.size || size,
-          total: result.pagination.total || 0,
-          totalPages: result.pagination.totalPages || 0,
+          total: result.pagination.total || bids.length,
+          totalPages: result.pagination.totalPages || Math.ceil(bids.length / size),
           loading: false
         }
       } else {

@@ -1,4 +1,4 @@
-import{_ as n,o as c,c as s,a as l,g as r,t}from"./index-DCxLnFSp.js";const u={name:"PolicyDetail",data(){return{currentPolicyId:null,policies:{"land-contract":{id:"land-contract",title:"中华人民共和国农村土地承包法",issuingAuthority:"全国人民代表大会常务委员会",publishDate:"2018年12月29日",implementDate:"2019年1月1日",source:"中国人大网",content:`<div class="law-content">
+import{_ as n,o as c,c as s,a as l,g as r,t}from"./index-DH_Yjx2O.js";const u={name:"PolicyDetail",data(){return{currentPolicyId:null,policies:{"land-contract":{id:"land-contract",title:"中华人民共和国农村土地承包法",issuingAuthority:"全国人民代表大会常务委员会",publishDate:"2018年12月29日",implementDate:"2019年1月1日",source:"中国人大网",content:`<div class="law-content">
 <h2>第一章 总则</h2>
 
 <h3>第一条</h3>

@@ -29,7 +29,7 @@
         <h3>投标信息</h3>
         <form @submit.prevent="submitBid">
           <div class="form-group">
-            <label>投标金额 (万元)</label>
+            <label>投标金额 (元)</label>
             <input type="number" v-model="bid.amount" min="0" step="0.01" required>
           </div>
           <div class="form-group">

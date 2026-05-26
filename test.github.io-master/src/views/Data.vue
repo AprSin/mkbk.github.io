@@ -28,8 +28,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         </div>
         <div class="stat-content">
-          <div class="stat-number">{{ totalAmount }}</div>
-          <div class="stat-label">累计交易金额 (万元)</div>
+          <div class="stat-number">{{ totalAmount.toLocaleString() }}</div>
+          <div class="stat-label">累计交易金额 (元)</div>
         </div>
       </div>
       <div class="stat-card">
@@ -275,7 +275,7 @@ export default {
      */
     formatAmount(amount) {
       if (amount === undefined || amount === null) return '0.00'
-      return parseFloat(amount).toFixed(2)
+      return parseFloat(amount).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
     },
 
     /**

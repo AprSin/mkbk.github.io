@@ -260,7 +260,7 @@
               v-if="displayShoppingOrders.length > 0"
               :current-page="pagination.orders.page"
               :page-size="pagination.orders.pageSize"
-              :total="pagination.orders.total"
+              :total="shoppingOrdersTotal"
               @page-change="handleOrderPageChange"
             />
           </div>
@@ -275,12 +275,12 @@
               <div class="loading-spinner"></div>
               <p>加载中...</p>
             </div>
-            <div v-else-if="displayBidOrders.length === 0" class="empty-order">
+            <div v-else-if="orderStore.bidPagination.total === 0" class="empty-order">
               <div class="empty-icon">📋</div>
               <p>暂无投标记录</p>
             </div>
             <template v-else>
-              <div class="order-item" v-for="order in displayBidOrders" :key="order.id">
+              <div class="order-item" v-for="order in paginatedBidOrders" :key="order.id">
                 <div class="order-header">
                   <h3>项目: {{ order.projectName }}</h3>
                   <span class="status-tag" :class="'status-' + order.status">{{ order.statusText }}</span>
@@ -1718,9 +1718,10 @@ export default {
       const end = start + pageSize
       return this.displayShoppingOrders.slice(start, end)
     },
-    // 分页后的投标订单
+    // 分页后的投标订单（用于显示）
     paginatedBidOrders() {
-      const { page, pageSize } = this.pagination.bidOrders
+      // 直接使用 displayBidOrders 作为分页数据源
+      const { page, pageSize } = this.orderStore.bidPagination
       const start = (page - 1) * pageSize
       const end = start + pageSize
       return this.displayBidOrders.slice(start, end)

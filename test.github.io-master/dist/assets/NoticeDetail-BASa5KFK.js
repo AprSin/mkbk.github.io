@@ -1,4 +1,4 @@
-import{_ as c,o as l,c as r,a as t,t as a,F as h,r as u,n as p,g as w,d as m,j as v}from"./index-DCxLnFSp.js";const g={name:"NoticeDetail",setup(){return{userStore:v()}},data(){return{pendingDownload:null,notice:{id:"1",title:"商丘市梁园区人民政府 关于印发《商丘市梁园区农村产权交易市场体系建设方案》《商丘市梁园区农村产权流转交易运营管理办法（试行）》的通知",content:`为规范农村产权交易行为，保障交易双方合法权益，促进农村产权流转交易市场健康发展，特制定本方案和管理办法。
+import{_ as c,o as l,c as r,a as t,t as a,F as h,r as u,j as p,g as w,d as m,u as v}from"./index-DH_Yjx2O.js";const g={name:"NoticeDetail",setup(){return{userStore:v()}},data(){return{pendingDownload:null,notice:{id:"1",title:"商丘市梁园区人民政府 关于印发《商丘市梁园区农村产权交易市场体系建设方案》《商丘市梁园区农村产权流转交易运营管理办法（试行）》的通知",content:`为规范农村产权交易行为，保障交易双方合法权益，促进农村产权流转交易市场健康发展，特制定本方案和管理办法。
 
 一、指导思想
 以习近平新时代中国特色社会主义思想为指导，全面贯彻党的二十大精神，坚持农业农村优先发展，深化农村改革，健全农村产权交易市场体系，促进农村资源要素有序流动，为乡村振兴提供有力支撑。

@@ -320,6 +320,11 @@ export default {
     onMounted(async () => {
       const result = await userStore.initAuth()
       console.log('[App] initAuth result:', result)
+      // 确保初始化后强制更新UI
+      if (!result.success) {
+        // 如果初始化失败，确保清空用户信息
+        await userStore.fetchCurrentUser()
+      }
     })
 
     return { userStore }
@@ -351,7 +356,8 @@ export default {
       },
       passwordStrength: 0,
       loggingIn: false,
-      registering: false
+      registering: false,
+      currentUser: null
     }
   },
   computed: {
@@ -874,7 +880,16 @@ export default {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 400px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+}
+
+.login-dialog-body {
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
 }
 
 .login-dialog-header {
@@ -916,10 +931,6 @@ export default {
 
 .login-dialog-close:hover {
   opacity: 1;
-}
-
-.login-dialog-body {
-  padding: 30px;
 }
 
 .account-type-tabs {
